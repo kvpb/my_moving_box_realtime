@@ -1,27 +1,26 @@
 <html>
-    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
-    <script type="text/javascript">
-      
-      var id = null;                                //Variable to hold setInterval
-      var element_id = document.getElementById("my_box_realtime");                  //Accepting the div element into a variable using the ID
-      var pos = 70;                //Variables for the final position of the div tag
-      var max_time = 0;                          //Declaring variable for max time limit.
-      clearInterval(id);
-      window.setInterval(my_frame, 500);
-      
-      function my_frame(){
-        if(pos == 0 || max_time ==35){
-            clearInterval(id);
-        }
-        else
-        {
-            pos--;
-            max_time++;
-            element_id.style.bottom = pos+"px";
-            element_id.style.right = pos+"px";
-        } 
-    }
-         
-      
-    </script>
+	<div id="my_box_realtime" style="background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+	<script type="text/javascript">
+		var id = null;
+		var element_id = document.getElementById("my_box_realtime");
+		var pos = 70;
+		var max_time = 0;
+		clearInterval( id );
+		window.setInterval( my_frame, 500 );
+
+		function my_frame()
+		{
+			if ( pos == 0 || max_time == 35 )
+			{
+				clearInterval( id );
+			}
+			else
+			{
+				pos--;
+				max_time++;
+				element_id.style.bottom = pos + "px";
+				element_id.style.right = pos + "px";
+			}
+		}
+	</script>
 </html>
